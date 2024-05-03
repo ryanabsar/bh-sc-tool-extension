@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    @font-face {
+      font-family: 'Cairo';
+      src: url('font/Cairo-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Cairo';
+      src: url('font/Cairo-Bold.ttf') format('truetype');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Cairo';
+      src: url('font/Cairo-Light.ttf') format('truetype');
+      font-weight: lighter;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'Cairo';
+      src: url('font/Cairo-SemiBold.ttf') format('truetype');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    body {
+      font-family: Cairo, Arial, sans-serif; /* Fallback to Arial if Cairo is not available */
+      margin: 0;
+      padding: 0;
+      background-color: #EAD7C3; /* Background color */
+      color: #000000; /* Text color */
+    }
+
+    #main {
+      min-width: 250px;
+      background-color: #EAD7C3;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0.5rem 0;
+      text-align: center;
+      color: #C17250; /* Title color */
+      font-family: Cairo, Arial, sans-serif; /* Fallback to Arial if Cairo is not available */
+    }
+
+    #btn-run {
+      margin-top: 15px;
+      cursor: pointer;
+      background-color: #C17250;
+      border: 0;
+      border-radius: 5px;
+      padding: 0.75rem 1rem;
+      font-weight: 600;
+      color: white;
+      transition: all 0.2s ease-in-out;
+      display: block;
+      margin: auto;
+      font-family: Cairo, Arial, sans-serif; /* Fallback to Arial if Cairo is not available */
+    }
+
+    #btn-run:hover {
+      background-color: #45a049;
+    }
+
+    /* Style for the image */
+    #logo {
+      display: block;
+      margin: auto;
+      margin-bottom: 10px;
+    }
+
+    /* Style for select elements */
+    select {
+      font-family: Cairo, Arial, sans-serif; /* Fallback to Arial if Cairo is not available */
+    }
+
+  </style>
+</head>
+<body>
+  <div id="main">
+    <img id="logo" src="./icons/logo.png" width="80px" height="80px"/>
+    <p class="title">Change all selected Plots</p>
+    <hr>
+    <p style="margin-bottom: 20px; text-align: center;">
+      This extension is complimentary of the scenario testing tool. It will change all selected plots into the same asset class. <br>
+      <br>
+      Run this extension when under the <strong>Scenario --> Edit Scenario</strong>. <br>
+      <br>
+      <!-- Add a message about delay if necessary -->
+    </p>
+    <form id="assetForm">
+      <div style="margin-bottom: 20px;">
+        <label for="assetClass">Asset Class:</label>
+        <select id="assetClass" name="assetClass" style="width: 100%;">
+          <option value="Commercial Offices">Commercial Offices</option>
+          <option value="Community Facilities">Community Facilities</option>
+          <option value="Cultural">Cultural</option>
+          <option value="Education">Education</option>
+          <option value="Hospitality ">Hospitality</option>
+          <option value="Land">Land</option>
+          <option value="Leisure">Leisure</option>
+          <option value="Mixed Use">Mixed Use</option>
+          <option value="Parking">Parking</option>
+          <option value="Residential">Residential</option>
+          <option value="Retail">Retail</option>
+        </select>
+      </div>
+      <div style="margin-bottom: 20px;">
+        <label for="assetType">Asset Type:</label>
+        <select id="assetType" name="assetType" style="width: 100%;">
+        </select>
+      </div>
+      <!--
+      <div>
+        <label for="delay-input">Delay:</label>
+        <input id="delay-input" required type="number" min="500" value="500" name="delay-input" step="100">
+      </div>
+      -->
+      <div>
+        <input id="btn-run" type="submit" value="Submit"></input>
+      </div>
+    </form>
+  </div>
+  <script src="./popup.js"></script>
+</body>
+</html>

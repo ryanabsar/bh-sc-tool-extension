@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Buro Happold Scenario Testing Tool ",
+  "description": "Automatically Overwrite all selected scenario to the same asset type",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "permissions": [
+    "tabs", 
+    "activeTab", 
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [ "http://dgda.nextlevelsoft.id/*" ],
+  "action": {
+    "default_title": "Change All Selected Plots Asset",
+    "default_popup": "popup.html"
+  }
+}
